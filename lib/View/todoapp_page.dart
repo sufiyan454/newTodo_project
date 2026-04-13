@@ -53,7 +53,7 @@ class _TodoAppState extends State<TodoApp> {
         backgroundColor: Colors.black,
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios_new,color: Colors.white,)),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.blue,
       body: Column(
         children: [
           Padding(
@@ -232,7 +232,7 @@ class _TodoAppState extends State<TodoApp> {
                     onPressed: provider.deleteAll,
                     child: const Text(
                       "Delete All",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.red),
                     ),
                   ),
                 ),
