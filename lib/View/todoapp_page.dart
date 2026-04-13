@@ -50,10 +50,10 @@ class _TodoAppState extends State<TodoApp> {
       appBar: AppBar(
         title: Text("To-Do List", style: TextStyle(color: Colors.white)),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios_new,color: Colors.white,)),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Padding(
@@ -162,6 +162,7 @@ class _TodoAppState extends State<TodoApp> {
                       leading: Transform.scale(
                         scale: 1.5,
                         child: Checkbox(
+                          checkColor: Colors.green,
                           value: true,
                           onChanged: (_) => provider.toggleTask(task),
                           shape: RoundedRectangleBorder(
@@ -220,7 +221,7 @@ class _TodoAppState extends State<TodoApp> {
                   width: 180,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Colors.red,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -232,7 +233,7 @@ class _TodoAppState extends State<TodoApp> {
                     onPressed: provider.deleteAll,
                     child: const Text(
                       "Delete All",
-                      style: TextStyle(color: Colors.red),
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
